@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Cereal Analysis Prediction</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/cereal-with-transparent-background-high-quality-ultra-hd_670382-59623.jpg');
+            background-position: center;
+            font-family: sans-serif;
+            background-size: cover;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+        .container-heading {
+            color: red;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .description {
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .results {
+            font-size: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .good {
+            color: green;
+        }
+        .bad {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Cereal Analysis Prediction</span></h2>
+        <div class='description'>
+            <p>A Machine Learning Web App using Flask.</p>
+        </div>
+
+        <!-- Result -->
+        <div class="results">
+            {% if z|float > 40 %}
+                <p class="good" >Prediction: <b><u>{{ z }}</u></b> - This cereal is of good quality!</p>
+            {% else %}
+                <p class="bad">Prediction: <b><u>{{ z }}</u></b> - This cereal is of poor quality.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

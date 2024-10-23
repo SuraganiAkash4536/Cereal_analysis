@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Cereal Analysis Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<style>
+.login{
+top: 20%;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div style='background-image: url("https://tse4.mm.bing.net/th?id=OIP.IzGxZEoB6Z9rlvfIyhgSrQHaEK&pid=Api&P=0&h=180");background-size:cover;height:100vh'>
+<div class="login  d-flex flex-column justify-content-center">
+
+
+<h1 class="mt-5" style = "text-align: center; color: red;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Cereal AnalysisBased on Ratings by using 
+Machine Learning Techniques
+<span class="label label-default"></span></h1>
+
+            <div class='description m-4' style = "text-align: center; background-color: black; color:white;border-radius: 20px;center;box-shadow: 2px 2px 5px rgba(0, 0, 0, 2);">
+    			<p style="font-size: 25px;" class="mt-5 ml-2 mr-2">The model utilizes historical data on cereals, including their nutritional content and consumer ratings. By training the model on this dataset, we can predict a quality rating for new cereals based on their nutritional profiles. The rating will help farmers and other consumers identify cereals that offer the best dietary benefits.</p>
+    			<p style="font-size: 25px;" class="mb-5 ml-2 mr-2"> In today's health-conscious society, consumers are increasingly aware of the nutritional quality of the food they consume. Cereals, often considered a staple breakfast option, come in various brands and formulations, each with its unique nutritional profile. However, consumers face the challenge of selecting cereals that align with their dietary needs and health goals.</p>
+    		</div>
+
+         <div  style="text-align: center;">     <form action="/assesment">
+                 <button type="submit" class="btn btn-success m-3" style = "text-align: center;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);">Click me to continue with prediction</button>
+             </form>
+            </div>
+
+
+</div>
+  </div>
+</body>
+</html>

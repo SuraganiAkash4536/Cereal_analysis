@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cereal Analysis Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background-image: url('https://wallpapercave.com/wp/JDlmniF.jpg');
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;    /* Center vertically */
+      margin: 0;              /* Remove default margin */
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;  /* Reduced padding */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      width: 350px; /* Adjusted width */
+    }
+    h1 {
+      color: black;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-size: 24px; /* Smaller font size */
+    }
+    select {
+      margin-bottom: 10px;
+      border: none;
+      outline: none;
+      padding: 8px; /* Reduced padding */
+      font-size: 12px; /* Smaller font size */
+      color: purple;
+      text-shadow: 1px 1px 1px rgba(255, 182, 193, 0.5);
+      border: 1px solid rgba(128, 0, 128, 0.4);
+      border-radius: 4px;
+      background-color: antiquewhite;
+      width: 100%; /* Full width for select */
+    }
+    input {
+      width: calc(100% - 16px); /* Full width with padding */
+      margin-bottom: 8px; /* Reduced margin */
+      border-radius: 10px;
+      height: 30px; /* Reduced height */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+      padding: 4px; /* Reduced padding */
+      font-size: 12px; /* Smaller font size */
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Cereal Analysis Prediction</h1>
+    <form action="/predict" method="post">
+      <select name="mfr" required>
+        <option disabled="disabled">Manufacturer</option>
+        <option value="0" selected="selected">A</option>
+        <option value="1">G</option>
+        <option value="2">K</option>
+        <option value="3">N</option>
+        <option value="4">P</option>
+        <option value="5">Q</option>
+        <option value="6">R</option>
+      </select>
+      <select name="type" required>
+        <option disabled="disabled" >Type</option>
+        <option  selected="selected" value="0">Cold</option>
+        <option value="1">Hot</option>
+      </select>
+      <input type="text" name="Calories" placeholder="Calories" required />
+      <input type="text" name="Protien" placeholder="Protein" required />
+      <input type="text" name="Fat" placeholder="Fat" required />
+      <input type="text" name="Sodium" placeholder="Sodium" required />
+      <input type="text" name="Fiber" placeholder="Fiber" required />
+      <input type="text" name="Carbo" placeholder="Carbohydrates" required />
+      <input type="text" name="Sugars" placeholder="Sugars" required />
+      <input type="text" name="Potass" placeholder="Potassium" required />
+      <input type="text" name="Vitamins" placeholder="Vitamins" required />
+      <input type="text" name="Shelf" placeholder="Shelf" required />
+      <input type="text" name="Weight" placeholder="Weight" required />
+      <input type="text" name="Cups" placeholder="Cups" required />
+      <button type="submit" class="btn btn-success mt-3">Predict</button>
+    </form>
+  </div>
+</body>
+</html>
